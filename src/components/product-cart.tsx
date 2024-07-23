@@ -1,5 +1,5 @@
 import { FaPlus } from "react-icons/fa";
-
+// this is the comment
 type ProductProps = {
   productId: string;
   photo: string;

@@ -19,6 +19,9 @@ const Home = () => {
 
       <main>
         <ProductCard productId="afdfdaf" name="macbook" price={200} stock ={10}  handlder={addToCartHandler} photo="https://m.media-amazon.com/images/I/71jG+e7roXL._SX679_.jpg" />
+        <ProductCard productId="afdfdaf" name="macbook" price={200} stock ={10}  handlder={addToCartHandler} photo="https://m.media-amazon.com/images/I/61ZEQXGTepL._SX679_.jpg" />
+        <ProductCard productId="afdfdaf" name="macbook" price={200} stock ={10}  handlder={addToCartHandler} photo="https://m.media-amazon.com/images/I/71jG+e7roXL._SX679_.jpg" />
+
       </main>
     </div>
   );
