@@ -14,11 +14,11 @@ const CartItem = ({ cartItem }) => {
       <img src={photo} alt="" />
       <article>
         <Link to={`/product/${productId}`}>{name}</Link>
-        <span>Rs{price}</span>
+        <span> Rs 3000{price}</span>
       </article>
 
       <div>
-        <button>-</button>
+        <button>+</button>
         <p>{quantity}</p>
         <button>-</button>
       </div>
