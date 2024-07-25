@@ -6,6 +6,7 @@ import Header from "./components/header";
 const Home = lazy(() => import("./pages/home"));
 const Search = lazy(() => import("./pages/search"));
 const Cart = lazy(() => import("./pages/cart"));
+const Shipping = lazy(() => import("./pages/shipping"));
 
 // Admin imports
 const Dashboard = lazy(() => import("./pages/admin/dashboard"));
@@ -32,21 +33,25 @@ const App = () => {
       {/* {Header} */}
 
       <Header />
-      
+
       <Suspense fallback={<Loader />}>
         <Routes>
+          {/* //*No Login Required Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
           <Route path="/cart" element={<Cart />} />
 
+
+          {/*  // * login required Routes} */}
+          <Route path="/shipping" element={<Shipping />} />
+
+
           
-          {/* Admin Routes */}
-
-
+          {/*  // *Admin Routes */}
           <Route
-          // element={
-          //   <ProtectedRoute isAuthenticated={true} adminRoute={true} isAdmin={true} />
-          // }
+          // * element={
+          // *  <ProtectedRoute isAuthenticated={true} adminRoute={true} isAdmin={true} />
+          // *}
           >
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/product" element={<Products />} />
@@ -75,7 +80,7 @@ const App = () => {
         </Routes>
       </Suspense>
 
-      {/* {headers} */}
+      {/* // * {headers} */}
     </Router>
   );
 };

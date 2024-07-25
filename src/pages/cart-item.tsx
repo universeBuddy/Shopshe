@@ -5,6 +5,7 @@ type CartItemProps = {
   cartItem: any;
 };
 
+
 const CartItem = ({ cartItem }) => {
   //
 
