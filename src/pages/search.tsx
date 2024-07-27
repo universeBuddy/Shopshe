@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ProductCard from "../components/product-cart";
 
 const Search = () => {
   const [search, setSearch] = useState("");
@@ -6,6 +7,11 @@ const Search = () => {
   const [maxPrice, setMaxPrice] = useState(10000000);
   const [category, setCategory] = useState("");
   const [page, setPage] = useState(1);
+
+  const addToCartHandler = () => {};
+
+  const isPrevPage = true;
+  const isNextPage = true;
 
   return (
     <div className="product-search-page">
@@ -32,10 +38,13 @@ const Search = () => {
             onChange={(e) => setMaxPrice(Number(e.target.value))}
           />
         </div>
-  {/*  //* category Section */}
+        {/*  //* category Section */}
         <div>
           <h4> Category</h4>
-          <select value={category} onChange={(e) => setCategory(e.target.value)}>
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
             <option value=""> ALL</option>
             <option value=""> Sample 1</option>
             <option value=""> Sample 2</option>
@@ -43,8 +52,6 @@ const Search = () => {
         </div>
       </aside>
 
-     
- 
 {/*//*    ||\\        //||      ****               ****        ===========        ==========         ============
 //*       ||  \\    //  ||     **  **           **     **      ||                 ||                     ||
 //*       ||    \\//    ||    **    **        **               ======             ||                     ||
@@ -57,13 +64,45 @@ const Search = () => {
 //&                                                  ** 
 //&                                         **     **                  
 //&                                            ****                                                                                   */}
-      
-      
-      
-      
-      
-      <main></main>                                
-    </div>                                  
+      <main>
+        <h1> Product</h1>
+        <input
+          type="text"
+          placeholder="Search by name... "
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+
+        <div className="search-product-list">
+          <ProductCard
+            productId="afdfdaf"
+            name="macbook"
+            price={200}
+            stock={10}
+            handlder={addToCartHandler}
+            photo="https://m.media-amazon.com/images/I/71jG+e7roXL._SX679_.jpg"
+          />
+        </div>
+        <article>
+          <button
+            disabled={!isPrevPage}
+            onClick={() => setPage((prev) => prev - 1)}
+          >
+            Prev
+          </button>
+          <span>
+            {" "}
+            {page} of {4}
+          </span>
+          <button
+            disabled={!isNextPage}
+            onClick={() => setPage((prev) => prev + 1)}
+          >
+            Next
+          </button>
+        </article>
+      </main>
+    </div>
   );
 };
 
