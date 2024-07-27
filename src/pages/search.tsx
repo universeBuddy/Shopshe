@@ -10,8 +10,8 @@ const Search = () => {
 
   const addToCartHandler = () => {};
 
-  const isPrevPage = true;
-  const isNextPage = true;
+  const isPrevPage = page > 1;
+  const isNextPage =page < 4 ;
 
   return (
     <div className="product-search-page">
