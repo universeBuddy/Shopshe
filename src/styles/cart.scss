@@ -58,7 +58,7 @@
 
 //                  cart -item
 .cart-item {
-  padding: 2rem;
+  padding: 1rem;
   @include flex(row, flex-start, center, 2.5rem);
   > img {
     @include square(20rem);

@@ -4,11 +4,14 @@ import Loader from "./components/loader";
 import Header from "./components/header";
 
 
+
 const Home = lazy(() => import("./pages/home"));
 const Search = lazy(() => import("./pages/search"));
 const Cart = lazy(() => import("./pages/cart"));
 const Shipping = lazy(() => import("./pages/shipping"));
 const Login = lazy(() => import("./pages/login"));
+
+
 
 // Admin imports
 const Dashboard = lazy(() => import("./pages/admin/dashboard"));
@@ -86,7 +89,7 @@ const App = () => {
         </Routes>
       </Suspense>
 
-     =
+     
     </Router>
   );
 };
