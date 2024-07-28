@@ -6,5 +6,5 @@ const app = express();
 
 app.listen(PORT,()=>{
 
-    console.log(`Express is working on http://localhost:${PORT}`)
+    console.log(`Express is working on http://localhost:${PORT}`);
 })
