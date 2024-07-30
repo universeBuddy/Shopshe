@@ -1,6 +1,6 @@
-import exp from "constants";
+
 import  express  from "express";
-import { deflate } from "zlib";
+import { newUser } from "../controllers/user.js";
 
 
 const app = express.Router();
