@@ -8,6 +8,7 @@ export const newUser = async (
   next: NextFunction
 ) => {
   try {
+    return next (new Error ("Meri Erroe"));
     const { name, email, photo, gender, _id, dob } = req.body;
     console.log( name, email, photo, gender, _id, dob);
 
