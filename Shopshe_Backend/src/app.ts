@@ -5,9 +5,13 @@ import { connectDB } from "./utility/feature.js";
 import { error } from "console";
 import { errorMiddleWare } from "./middlewares/error.js";
 
-connectDB();
-const app = express();
+// * product route : ==================
+import productRoute from "./routes/product.js"
+
+
 const PORT = 3000;
+const app = express();
+connectDB();
 
 // * middleware use for json
 
@@ -21,6 +25,7 @@ app.get("/", (req, res) => {
 
 // * Using Route
 app.use("/api/v1/user",userRoute);
+app.use("/api/v1/product",productRoute);
 
 // * Error Middle ware
 app.use(errorMiddleWare);
